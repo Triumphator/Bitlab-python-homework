@@ -108,27 +108,31 @@ class User:
         self.login = login
         self.password = password
 
-    def toDict(self):
-        return None
-
 
 class Main:
-    def getuserList():
+
+    def getUserList():
         file = open('user.json', 'r')
-        users_dict = json.load(file)
+        text = json.load(file)
         file.close()
-        [print(key,':',value) for key, value in users_dict.items()]
+        for key, value in text.items():
+            print(key, ':', value)
 
     def saveUser(user):
         file = open('user.json', 'r')
-        text = json.load(file)
-        dict = json.loads(text)
-        dict.update([user])
-        json.dump(dict, file)
+        dict = json.load(file)
         file.close()
+        file2 = open('user.json', 'w')
+        dictUser = {"id" : user.id, "login" : user.login, "password" : user.password}
+        dict["user" + str(user.id)] = dictUser
+
+        json.dump(dict, file2)
+        file2.close()
 
 
     while True:
+
+
         choice = int(input(""" 
     PRESS [1] TO ADD USERS
     PRESS [2] TO LIST USERS
@@ -144,10 +148,10 @@ class Main:
                     saveUser(user)
                     continue
                except:
-                   print("Something went wrong")
-                   continue
+                    print("Something went wrong")
+                    continue
             elif choice == 2:
-                getuserList()
+                getUserList()
                 continue
             else:
                 print("Exiting")
