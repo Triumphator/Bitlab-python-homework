@@ -38,7 +38,8 @@ def handle_start(message):  # функция, которая убирает на
 @bot.message_handler(content_types=["text"])
 def handle_text(message):
     if message.text == 'фото':
-        directory = 'H:/Obmen/WoW media/Fan art'
+        #directory = 'H:/Obmen/WoW media/Fan art'
+        directory = 'H:/My Pictures/Game Art/Red Alert 3'
         all_files_in_directory = os.listdir(directory)
         random_file = random.choice(all_files_in_directory)
         img = open(directory + '/' + random_file, 'rb')
@@ -47,13 +48,15 @@ def handle_text(message):
         img.close()
 
     elif message.text == 'аудио':
+        #audio = open("H:/Music/Bachata/Xtreme - We Got Next/01. Te Extraño.mp3", 'rb')
         audio = open("H:/Music/Bachata/Xtreme - We Got Next/01. Te Extraño.mp3", 'rb')
         bot.send_chat_action(message.from_user.id, 'upload_audio')
         bot.send_audio(message.from_user.id, audio)
         audio.close()
 
     elif message.text == 'документы':
-        directory = 'H:/Obmen/WoW media/Compositions/WarCraft III'
+        #directory = 'H:/Obmen/WoW media/Compositions/WarCraft III'
+        directory = 'H:/Reserv/SAM
         all_files_in_directory = os.listdir(directory)
         print(all_files_in_directory)
 
