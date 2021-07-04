@@ -108,3 +108,92 @@ sum=0
 for i in range(n,m+1):
     sum=sum+i
 print(sum/(m+1-n))"""
+
+#20 Напишите программу, которая запрашивает числа. Программа должна остановиться запрашивать, когда мы вводим 0.
+# Программа должна вывести количество введенных чисел.
+"""sum=0
+while True:
+    n=int(input("Enter a number:"))
+    if n==0:
+        break
+    sum=sum+1
+print(sum)"""
+#22 Напишите программу, которая запрашивает числа. Программа должна остановиться запрашивать, когда мы вводим 0.
+# Программа должна вывести среднее значение введенных чисел.
+"""sum=0
+count=0
+while True:
+    n=int(input("Enter a number:"))
+    if n==0:
+        break
+    sum=sum+n
+    count=count+1
+print(sum/count if count>0 else "Cannot divide by 0")"""
+#23 Напишите программу, которая запрашивает числа. Программа должна остановиться запрашивать, когда мы вводим 0.
+# Программа должна вывести максимальное значение из всех чисел.
+"""numlist=[0]
+while True:
+    n=int(input("Enter a number:"))
+    if n==0:
+        break
+    numlist.append(n)
+print(max(numlist))"""
+#24 Напишите программу, в которой я ввожу число n. Программа должна вывести умножение первых n чисел. То есть 1*2*3*4*5...n.
+"""n=int(input("Enter a number: "))
+sum=1
+for i in range(n):
+    sum=sum*(i+1)
+print(sum)"""
+#25 Напишите программу, которая запрашивает дробные числа (double d). Программа должна остановиться запрашивать,
+# когда мы вводим 0. Программа должна вывести умножение всех введенных чисел.
+"""sum=1
+while True:
+    n = float(input("Enter a fractional number, 0 to stop "))
+    if n==0:
+        break
+    sum=sum*n
+print(round(sum,3))"""
+#26 Напишите программу, которая запрашивает числа. Программа должна остановиться запрашивать, когда мы вводим 0.
+# Программа должна вывести сумму нечетных элементов, которые мы вводили.
+"""sum=0
+while True:
+    n=int(input("Enter a number, 0 to stop "))
+    if n==0:
+        break
+    if n%2==0:
+        continue
+    sum=sum+n
+print(sum)"""
+#27 Программа запрашивает число n. Программа должна вывести сумму первых n чисел в последовательности 1+1/2+1/3+1/4...
+"""n=int(input("n="))
+sum=0
+for i in range(n):
+    sum=sum+(1/(i+1))
+print(round(sum,4))"""
+#28 Вводятся 4 числа: int a, int b, int c и int d. Выведите все числа на отрезке от a до b,
+# дающие остаток c при делении на d. Если таких чисел не существует, то ничего выводить не нужно.
+"""a,b,c,d = map(int, input("Enter 4 numbers separated by space ").split())
+for i in range(a,b):
+    if d!=0 and i%d==c:
+        print(i, end=" ")"""
+#29 По данному натуральному n вычислите сумму
+"""n=int(input("n="))
+sum=0
+for i in range(n):
+    sum=sum+((i+1)**2)
+print(sum)"""
+#30
+"""while True:
+    k,w,n=map(int, input("Banana price, money, item count ").split())
+    if k>=1 and w<=1000 and n>=0 and n<=109:
+        break
+sum=0
+step=0
+for i in range(n):
+    step=(i+1)*k
+    sum=sum+step
+loan=sum-w
+print(loan if loan>0 else "0")"""
+
+
+

@@ -326,3 +326,172 @@ string_list(arr, s)"""
 
 # 23 Создайте такую функцию, которая принимает в аргументы двумерный массив размера NxN.
 # Выведите все элементы стоящие на диагонали как показано в примерах.
+"""def diagonal(array):
+    for i in range(len(array)):
+        for j in range(len(array[i])):
+            if i == j:
+                print(array[i][j])
+
+n = int(input())
+arr = []
+for i in range(n):
+    row = input().split(maxsplit=n)[:n]
+    for j in range(n):
+        row[j] = int(row[j])
+    arr.append(row)
+
+diagonal(arr)"""
+
+# 24 Создайте такую функцию, которая принимает в аргументы двумерный массив целостных чисел.
+# Функция должна возвращать сумму всех чисел, у которых индексы по колонке и по строке нечетные.
+"""def odd_index_sum(array):
+    sum_ = 0
+    for i in range(len(array)):
+        for j in range(len(array[i])):
+            if i % 2 != 0 and j % 2 != 0:
+                sum_ += array[i][j]
+    print(sum_)
+
+
+n, m = map(int, input().split())
+arr = []
+for i in range(n):
+    arr.append([int(j) for j in input().split(maxsplit=m)[:m]])
+
+odd_index_sum(arr)"""
+
+# 25 Создайте такую функцию, которая принимает в аргументы список из целых чисел. Найдите сумму четных чисел массива, которые меньше чем 11.
+"""def even11(array):
+    sum_ = 0
+    for i in array:
+        if i %2 == 0 and i < 11:
+            sum_ += i
+    return sum_
+
+while True:
+    n = int(input(">"))
+    if n > 1:
+        break
+
+arr = [int(i) for i in input().split(maxsplit=n)[:n]]
+print(even11(arr))"""
+
+# 26 Создайте такую функцию, которая принимает в аргументы список целостных чисел и число m.
+# Нужно заменить все числа в списке, которые больше m, на среднее арифметическое всех чисел массива.
+"""def mean(array, m):
+    sum_ = 0
+    for j in array:
+        sum_ += j
+    print(sum_, len(array))
+    mean_array = sum_/len(array)
+    for i in array:
+        if i > m:
+            i = mean_array
+        print(i, end=" ")
+
+
+while True:
+    n = int(input(">"))
+    if n > 1:
+        break
+
+arr = [int(i) for i in input().split(maxsplit=n)[:n]]
+m = int(input("m="))
+mean(arr, m)"""
+
+# 27 Создайте такую функцию, которая принимает в аргументы список целостных чисел. Поменяйте местами наибольший и наименьший элементы списка.
+"""def min_max_swap(array):
+    imn = array.index(min(array))
+    imx = array.index(max(array))
+    array[imx], array[imn] = array[imn], array[imx]
+    for i in array:
+        print(i, end=" ")
+
+
+while True:
+    n = int(input(">"))
+    if n > 1:
+        break
+arr = [int(i) for i in input().split(maxsplit=n)[:n]]
+min_max_swap(arr)"""
+
+# 28 Создайте такую функцию которая принимает в аргументы список целостных чисел. Найдите сумму наибольшего и наименьшего элементов списка.
+"""min_max_sum = lambda array: max(array) + min(array)
+
+
+while True:
+    n = int(input(">"))
+    if n > 1:
+        break
+
+arr = [int(i) for i in input().split(maxsplit=n)[:n]]
+print(min_max_sum(arr))"""
+
+# 29 Создайте такую функцию, которая принимает в аргументы два числа. Если оба числа четные - функция возвращает их умножение.
+# Если оба числа нечетные - функция возвращает их сумму. Если одно из чисел четное, а второе нечетное -  функция возвращает это нечетное число.
+"""def even_odd_func(a, b):
+    if a %2 == 0 and b %2 == 0:
+        return a * b
+    elif a %2 != 0 and b %2 != 0:
+        return a + b
+    else:
+        if a %2 != 0:
+            return a
+        else:
+            return b
+
+
+n1 = int(input("n1="))
+n2 = int(input("n2="))
+print(even_odd_func(n1, n2))"""
+
+# 30 Создайте такую функцию, которая принимает в аргументы список целостных чисел, и определенное целостное число m.
+# Функция в итоге должен вывести те числа в списке, значение которых совпадают с их индексами и не делятся на число m.
+"""def rocket_science(array, number):
+    for i in range(len(array)):
+        if array[i] == i and array[i] % number != 0:
+            print(array[i], end=" ")
+
+
+while True:
+    n = int(input(">"))
+    if n > 1:
+        break
+
+arr = [int(i) for i in input().split(maxsplit=n)[:n]]
+m = int(input("m="))
+rocket_science(arr, m)"""
+
+
+class Student:
+    id = int()
+    name = ""
+    surname = ""
+    gpa = float()
+
+    def __init__(self, id, name, surname, gpa):
+        self.id = id
+        self.name = name
+        self.surname = surname
+        self.gpa = gpa
+
+    def getStudentData(self):
+        print("id = {0}, name = {1}, surname = {2}, gpa = {3}".format(self.id, self.name, self.surname, self.gpa))
+
+
+class Main:
+    student_Jaina = Student(1, "Jaina", "Proudmoore", 5.4)
+    student_Arthas = Student(2, "Arthas", "Menethil", 3.4)
+    student_Quel = Student(3, "Quel-Thas", "Sunstrider", 4.5)
+    student_Sylva = Student(4, "Sylvanas", "Windrunner", 2.9)
+    student_Tirion = Student(5, "Tirion", "Fordring", 3.8)
+
+    students = []
+    students.append(student_Jaina)
+    students.append(student_Arthas)
+    students.append(student_Quel)
+    students.append(student_Sylva)
+    students.append(student_Tirion)
+
+    for person in students:
+        person.getStudentData()
