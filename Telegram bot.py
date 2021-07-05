@@ -44,19 +44,19 @@ def handle_text(message):
         random_file = random.choice(all_files_in_directory)
         img = open(directory + '/' + random_file, 'rb')
         bot.send_chat_action(message.from_user.id, 'upload_photo')
-        bot.send_photo(message.from_user.id, img)
+        bot.send_photo(message.from_user.id, img, caption="Testing")
         img.close()
 
     elif message.text == 'аудио':
         #audio = open("H:/Music/Bachata/Xtreme - We Got Next/01. Te Extraño.mp3", 'rb')
-        audio = open("H:/Music/Bachata/Xtreme - We Got Next/01. Te Extraño.mp3", 'rb')
+        audio = open("H:/My Music/(2012) Jessica Curry - Dear Esther/01. Jessica Curry - Dear Esther.mp3", 'rb')
         bot.send_chat_action(message.from_user.id, 'upload_audio')
         bot.send_audio(message.from_user.id, audio)
         audio.close()
 
     elif message.text == 'документы':
         #directory = 'H:/Obmen/WoW media/Compositions/WarCraft III'
-        directory = 'H:/Reserv/SAM
+        directory = 'H:/Reserv/SAM'
         all_files_in_directory = os.listdir(directory)
         print(all_files_in_directory)
 
@@ -68,11 +68,10 @@ def handle_text(message):
 
 
     elif message.text == 'локация':
-        bot.send_chat_action(message.from_user.id, 'upload_location')
-        bot.send_location(message.from_user.id, 42.2129150703383, 80.17346477808603)
+        bot.send_chat_action(message.from_user.id, 'find_location')
+        bot.send_location(message.from_user.id, latitude=42.2129150, longitude=80.1734647)
 
 @bot.message_handler(content_types=["text"])
-
 def handle_text(message):
     answer = "Извините, я еще не научился отвечать на такие сложные сообщения"
     if message.text.lower() == "привет":

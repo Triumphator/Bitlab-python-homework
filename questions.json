@@ -1,0 +1,13 @@
+{
+  "q1": {"question": "Which band composed 'Stairway to heaven?'", "answers": ["The Rolling stones", "Queen", "Led zeppelin", "Deep purple"], "correct_answer": "Led zeppelin", "correct_answer_position": 2},
+  "q2": {"question": "Who is considered to be the king of pop music?", "answers": ["Britney Spears", "Michael Jackson", "Madonna", "Justin Bieber"], "correct_answer": "Michael Jackson", "correct_answer_position": 1},
+  "q3": {"question": "Album that does not belong to The beatles", "answers": ["Night at the opera", "White album", "Revolver", "A hard day's night"], "correct_answer": "Night at the opera", "correct_answer_position": 0},
+  "q4": {"question": "A character from the series 'The boys' has a name similar to this band's album", "answers": ["Metallica", "Backstreet boys", "Jethro tull", "Red hot chili peppers"], "correct_answer": "Red hot chili peppers", "correct_answer_position": 3},
+  "q5": {"question": "In 1975 Bohemian Rhapsody was number one for nine weeks. It was finally knocked off the top slot by a song with a name that appears in the lyrics of Bohemian Rhapsody. Name the song and the band that ended Queen’s number one success.", "answers": ["Open your eyes", "Easy come, easy go", "Any way the wind blows", "Mamma mia"], "correct_answer": "Mamma mia", "correct_answer_position": 3},
+  "q6": {"question": "Which art rock band was widely using flute?", "answers": ["Jethro tull", "The Beatles", "Deep purple", "The who"], "correct_answer": "Jethro tull", "correct_answer_position": 0},
+  "q7": {"question": "Gangnam style was released in'", "answers": ["2010", "2012", "2013", "2014"], "correct_answer": "2012", "correct_answer_position": 1},
+  "q8": {"question": "Exclude singer that is not part of k-pop band 'Blackpink'", "answers": ["Lisa", "Jenny", "Hyona", "Rose"], "correct_answer": "Hyona", "correct_answer_position": 2},
+  "q9": {"question": "Which band has most unusual and original music videos?", "answers": ["Destiny's child", "OK GO", "Arctic monkeys", "Black sabbath"], "correct_answer": "OK GO", "correct_answer_position": 1},
+  "q10": {"question": "This band plays no instruments and sings acapella", "answers": ["Five", "Pentatonix", "Destiny's child", "Voice singers"], "correct_answer": "Pentatonix", "correct_answer_position": 1},
+  "q11": {"question": "According to Catie Melua, as a matter of fact this is the number of bicycles in Beijing", "answers": ["1 billion", "150 million", "666", "9 million"], "correct_answer": "9 million", "correct_answer_position": 3}
+}

@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\Cheena\PycharmProjects\myfristproject\venv"
+VIRTUAL_ENV="C:\Users\nowhe\PycharmProjects\Fresh start\venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
